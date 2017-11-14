@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="Vega@localhost">
+  <database-model serializer="dbm" rdbms="MSSQL" format-version="4.4">
+    <root id="1">
+      <ServerType>standalone</ServerType>
+    </root>
+    <database id="2" parent="1" name="vega">
+      <ObjectId>5</ObjectId>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </database>
+    <database id="3" parent="1" name="master">
+      <ObjectId>1</ObjectId>
+    </database>
+    <database id="4" parent="1" name="tempdb">
+      <ObjectId>2</ObjectId>
+    </database>
+    <database id="5" parent="1" name="model">
+      <ObjectId>3</ObjectId>
+    </database>
+    <database id="6" parent="1" name="msdb">
+      <ObjectId>4</ObjectId>
+    </database>
+    <schema id="7" parent="2" name="dbo">
+      <ObjectId>1</ObjectId>
+      <IntrospectionTimestamp>2017-11-13.21:12:46.747</IntrospectionTimestamp>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="8" parent="2" name="guest">
+      <ObjectId>2</ObjectId>
+    </schema>
+    <schema id="9" parent="2" name="INFORMATION_SCHEMA">
+      <ObjectId>3</ObjectId>
+    </schema>
+    <schema id="10" parent="2" name="sys">
+      <ObjectId>4</ObjectId>
+    </schema>
+    <schema id="11" parent="2" name="db_owner">
+      <ObjectId>16384</ObjectId>
+    </schema>
+    <schema id="12" parent="2" name="db_accessadmin">
+      <ObjectId>16385</ObjectId>
+    </schema>
+    <schema id="13" parent="2" name="db_securityadmin">
+      <ObjectId>16386</ObjectId>
+    </schema>
+    <schema id="14" parent="2" name="db_ddladmin">
+      <ObjectId>16387</ObjectId>
+    </schema>
+    <schema id="15" parent="2" name="db_backupoperator">
+      <ObjectId>16389</ObjectId>
+    </schema>
+    <schema id="16" parent="2" name="db_datareader">
+      <ObjectId>16390</ObjectId>
+    </schema>
+    <schema id="17" parent="2" name="db_datawriter">
+      <ObjectId>16391</ObjectId>
+    </schema>
+    <schema id="18" parent="2" name="db_denydatareader">
+      <ObjectId>16392</ObjectId>
+    </schema>
+    <schema id="19" parent="2" name="db_denydatawriter">
+      <ObjectId>16393</ObjectId>
+    </schema>
+    <table id="20" parent="7" name="Features">
+      <ObjectId>1525580473</ObjectId>
+      <CreatedTimestamp>2017-11-12.21:27:11.890</CreatedTimestamp>
+      <ModifiedTimestamp>2017-11-13.19:51:09.960</ModifiedTimestamp>
+    </table>
+    <table id="21" parent="7" name="Makes">
+      <ObjectId>1237579447</ObjectId>
+      <CreatedTimestamp>2017-11-11.20:55:46.160</CreatedTimestamp>
+      <ModifiedTimestamp>2017-11-11.20:55:46.417</ModifiedTimestamp>
+    </table>
+    <table id="22" parent="7" name="Models">
+      <ObjectId>1269579561</ObjectId>
+      <CreatedTimestamp>2017-11-11.20:55:46.163</CreatedTimestamp>
+      <ModifiedTimestamp>2017-11-13.19:51:09.957</ModifiedTimestamp>
+    </table>
+    <table id="23" parent="7" name="VehicleFeatures">
+      <ObjectId>1893581784</ObjectId>
+      <CreatedTimestamp>2017-11-13.19:51:09.960</CreatedTimestamp>
+      <ModifiedTimestamp>2017-11-13.19:51:09.963</ModifiedTimestamp>
+    </table>
+    <table id="24" parent="7" name="Vehicles">
+      <ObjectId>1845581613</ObjectId>
+      <CreatedTimestamp>2017-11-13.19:51:09.950</CreatedTimestamp>
+      <ModifiedTimestamp>2017-11-13.19:51:09.967</ModifiedTimestamp>
+    </table>
+    <table id="25" parent="7" name="__EFMigrationsHistory">
+      <ObjectId>1205579333</ObjectId>
+      <CreatedTimestamp>2017-11-11.20:55:46.127</CreatedTimestamp>
+      <ModifiedTimestamp>2017-11-11.20:55:46.127</ModifiedTimestamp>
+    </table>
+    <column id="26" parent="20" name="Id">
+      <Position>1</Position>
+      <DataType>int|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="27" parent="20" name="Name">
+      <Position>2</Position>
+      <DataType>nvarchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="28" parent="20" name="PK_Features">
+      <Position>1</Position>
+      <ColNames>Id</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="29" parent="20" name="PK_Features">
+      <ObjectId>1541580530</ObjectId>
+      <CreatedTimestamp>2017-11-12.21:27:11.893</CreatedTimestamp>
+      <ModifiedTimestamp>2017-11-12.21:27:11.893</ModifiedTimestamp>
+      <ColNames>Id</ColNames>
+      <UnderlyingIndexName>PK_Features</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="30" parent="21" name="Id">
+      <Position>1</Position>
+      <DataType>int|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="31" parent="21" name="Name">
+      <Position>2</Position>
+      <DataType>nvarchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="32" parent="21" name="PK_Makes">
+      <Position>1</Position>
+      <ColNames>Id</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="33" parent="21" name="PK_Makes">
+      <ObjectId>1253579504</ObjectId>
+      <CreatedTimestamp>2017-11-11.20:55:46.160</CreatedTimestamp>
+      <ModifiedTimestamp>2017-11-11.20:55:46.160</ModifiedTimestamp>
+      <ColNames>Id</ColNames>
+      <UnderlyingIndexName>PK_Makes</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="34" parent="22" name="Id">
+      <Position>1</Position>
+      <DataType>int|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="35" parent="22" name="MakeId">
+      <Position>2</Position>
+      <DataType>int|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="36" parent="22" name="Name">
+      <Position>3</Position>
+      <DataType>nvarchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="37" parent="22" name="PK_Models">
+      <Position>1</Position>
+      <ColNames>Id</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <index id="38" parent="22" name="IX_Models_MakeId">
+      <Position>2</Position>
+      <ColNames>MakeId</ColNames>
+    </index>
+    <key id="39" parent="22" name="PK_Models">
+      <ObjectId>1317579732</ObjectId>
+      <CreatedTimestamp>2017-11-11.20:55:46.417</CreatedTimestamp>
+      <ModifiedTimestamp>2017-11-11.20:55:46.417</ModifiedTimestamp>
+      <ColNames>Id</ColNames>
+      <UnderlyingIndexName>PK_Models</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="40" parent="22" name="FK_Models_Makes_MakeId">
+      <ObjectId>1333579789</ObjectId>
+      <CreatedTimestamp>2017-11-11.20:55:46.417</CreatedTimestamp>
+      <ModifiedTimestamp>2017-11-11.20:55:46.417</ModifiedTimestamp>
+      <ColNames>MakeId</ColNames>
+      <RefTableId>1237579447</RefTableId>
+      <RefSchemaName>dbo</RefSchemaName>
+      <RefTableName>Makes</RefTableName>
+      <RefKeyName>PK_Makes</RefKeyName>
+      <RefColNames>Id</RefColNames>
+    </foreign-key>
+    <column id="41" parent="23" name="VehicleId">
+      <Position>1</Position>
+      <DataType>int|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="42" parent="23" name="FeatureId">
+      <Position>2</Position>
+      <DataType>int|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="43" parent="23" name="PK_VehicleFeatures">
+      <Position>1</Position>
+      <ColNames>VehicleId
+FeatureId</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <index id="44" parent="23" name="IX_VehicleFeatures_FeatureId">
+      <Position>2</Position>
+      <ColNames>FeatureId</ColNames>
+    </index>
+    <key id="45" parent="23" name="PK_VehicleFeatures">
+      <ObjectId>1909581841</ObjectId>
+      <CreatedTimestamp>2017-11-13.19:51:09.960</CreatedTimestamp>
+      <ModifiedTimestamp>2017-11-13.19:51:09.960</ModifiedTimestamp>
+      <ColNames>VehicleId
+FeatureId</ColNames>
+      <UnderlyingIndexName>PK_VehicleFeatures</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="46" parent="23" name="FK_VehicleFeatures_Vehicles_VehicleId">
+      <ObjectId>1941581955</ObjectId>
+      <CreatedTimestamp>2017-11-13.19:51:09.960</CreatedTimestamp>
+      <ModifiedTimestamp>2017-11-13.19:51:09.960</ModifiedTimestamp>
+      <ColNames>VehicleId</ColNames>
+      <RefTableId>1845581613</RefTableId>
+      <RefSchemaName>dbo</RefSchemaName>
+      <RefTableName>Vehicles</RefTableName>
+      <RefKeyName>PK_Vehicles</RefKeyName>
+      <RefColNames>Id</RefColNames>
+    </foreign-key>
+    <foreign-key id="47" parent="23" name="FK_VehicleFeatures_Features_FeatureId">
+      <ObjectId>1925581898</ObjectId>
+      <CreatedTimestamp>2017-11-13.19:51:09.960</CreatedTimestamp>
+      <ModifiedTimestamp>2017-11-13.19:51:09.960</ModifiedTimestamp>
+      <ColNames>FeatureId</ColNames>
+      <RefTableId>1525580473</RefTableId>
+      <RefSchemaName>dbo</RefSchemaName>
+      <RefTableName>Features</RefTableName>
+      <RefKeyName>PK_Features</RefKeyName>
+      <RefColNames>Id</RefColNames>
+    </foreign-key>
+    <column id="48" parent="24" name="Id">
+      <Position>1</Position>
+      <DataType>int|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="49" parent="24" name="ContactEmail">
+      <Position>2</Position>
+      <DataType>nvarchar(255)|0</DataType>
+    </column>
+    <column id="50" parent="24" name="ContactName">
+      <Position>3</Position>
+      <DataType>nvarchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="51" parent="24" name="ContactPhone">
+      <Position>4</Position>
+      <DataType>nvarchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="52" parent="24" name="IsRegistered">
+      <Position>5</Position>
+      <DataType>bit|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="53" parent="24" name="LastUpdate">
+      <Position>6</Position>
+      <DataType>datetime2|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="54" parent="24" name="ModelId">
+      <Position>7</Position>
+      <DataType>int|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="55" parent="24" name="PK_Vehicles">
+      <Position>1</Position>
+      <ColNames>Id</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <index id="56" parent="24" name="IX_Vehicles_ModelId">
+      <Position>2</Position>
+      <ColNames>ModelId</ColNames>
+    </index>
+    <key id="57" parent="24" name="PK_Vehicles">
+      <ObjectId>1861581670</ObjectId>
+      <CreatedTimestamp>2017-11-13.19:51:09.953</CreatedTimestamp>
+      <ModifiedTimestamp>2017-11-13.19:51:09.953</ModifiedTimestamp>
+      <ColNames>Id</ColNames>
+      <UnderlyingIndexName>PK_Vehicles</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="58" parent="24" name="FK_Vehicles_Models_ModelId">
+      <ObjectId>1877581727</ObjectId>
+      <CreatedTimestamp>2017-11-13.19:51:09.953</CreatedTimestamp>
+      <ModifiedTimestamp>2017-11-13.19:51:09.953</ModifiedTimestamp>
+      <ColNames>ModelId</ColNames>
+      <RefTableId>1269579561</RefTableId>
+      <RefSchemaName>dbo</RefSchemaName>
+      <RefTableName>Models</RefTableName>
+      <RefKeyName>PK_Models</RefKeyName>
+      <RefColNames>Id</RefColNames>
+    </foreign-key>
+    <column id="59" parent="25" name="MigrationId">
+      <Position>1</Position>
+      <DataType>nvarchar(150)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="60" parent="25" name="ProductVersion">
+      <Position>2</Position>
+      <DataType>nvarchar(32)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="61" parent="25" name="PK___EFMigrationsHistory">
+      <Position>1</Position>
+      <ColNames>MigrationId</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="62" parent="25" name="PK___EFMigrationsHistory">
+      <ObjectId>1221579390</ObjectId>
+      <CreatedTimestamp>2017-11-11.20:55:46.130</CreatedTimestamp>
+      <ModifiedTimestamp>2017-11-11.20:55:46.130</ModifiedTimestamp>
+      <ColNames>MigrationId</ColNames>
+      <UnderlyingIndexName>PK___EFMigrationsHistory</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>

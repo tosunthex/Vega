@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$USER_HOME$/.Rider2017.2/system/resharper-host/local/Transient/ReSharperHost/v10/SolutionCaches/_Vega.1872916366.00" t="ExcludeRecursive" />
+    <e p="$PROJECT_DIR$" t="IncludeRecursive">
+      <e p=".angular-cli.json" t="Include" />
+      <e p=".bash_profile" t="Include" />
+      <e p=".gitignore" t="Include" />
+      <e p="ClientApp" t="Include">
+        <e p="app" t="Include">
+          <e p="app.module.browser.ts" t="Include" />
+          <e p="app.module.server.ts" t="Include" />
+          <e p="app.module.shared.ts" t="Include" />
+          <e p="components" t="Include">
+            <e p="app" t="Include">
+              <e p="app.component.css" t="Include" />
+              <e p="app.component.html" t="Include" />
+              <e p="app.component.ts" t="Include" />
+            </e>
+            <e p="counter" t="Include">
+              <e p="counter.component.html" t="Include" />
+              <e p="counter.component.spec.ts" t="Include" />
+              <e p="counter.component.ts" t="Include" />
+            </e>
+            <e p="fetchdata" t="Include">
+              <e p="fetchdata.component.html" t="Include" />
+              <e p="fetchdata.component.ts" t="Include" />
+            </e>
+            <e p="home" t="Include">
+              <e p="home.component.html" t="Include" />
+              <e p="home.component.ts" t="Include" />
+            </e>
+            <e p="navmenu" t="Include">
+              <e p="navmenu.component.css" t="Include" />
+              <e p="navmenu.component.html" t="Include" />
+              <e p="navmenu.component.ts" t="Include" />
+            </e>
+            <e p="vehicle-form" t="Include">
+              <e p="vehicle-form.component.css" t="Include" />
+              <e p="vehicle-form.component.html" t="Include" />
+              <e p="vehicle-form.component.ts" t="Include" />
+            </e>
+          </e>
+          <e p="services" t="Include">
+            <e p="vehicle.service.ts" t="Include" />
+          </e>
+        </e>
+        <e p="boot.browser.ts" t="Include" />
+        <e p="boot.server.ts" t="Include" />
+        <e p="dist" t="Include">
+          <e p="89889688147bd7575d6327160d64e760.svg" t="Include" />
+          <e p="main-server.js" t="Include" />
+          <e p="vendor.js" t="Include" />
+        </e>
+        <e p="test" t="Include">
+          <e p="boot-tests.ts" t="Include" />
+          <e p="karma.conf.js" t="Include" />
+        </e>
+      </e>
+      <e p="Controllers" t="Include">
+        <e p="FeaturesController.cs" t="Include" />
+        <e p="HomeController.cs" t="Include" />
+        <e p="MakesController.cs" t="Include" />
+        <e p="Resources" t="Include">
+          <e p="ContactResource.cs" t="Include" />
+          <e p="FeatureResource.cs" t="Include" />
+          <e p="MakeResource.cs" t="Include" />
+          <e p="ModelResource.cs" t="Include" />
+          <e p="VehicleResource.cs" t="Include" />
+        </e>
+        <e p="SampleDataController.cs" t="Include" />
+        <e p="VehiclesController.cs" t="Include" />
+      </e>
+      <e p="Mapping" t="Include">
+        <e p="MappingProfile.cs" t="Include" />
+      </e>
+      <e p="Migrations" t="Include">
+        <e p="20171109213509_InitialMigration.Designer.cs" t="Include" />
+        <e p="20171109213509_InitialMigration.cs" t="Include" />
+        <e p="20171110131247_ApplyConstraints.Designer.cs" t="Include" />
+        <e p="20171110131247_ApplyConstraints.cs" t="Include" />
+        <e p="20171110222638_SeedDatabase.Designer.cs" t="Include" />
+        <e p="20171110222638_SeedDatabase.cs" t="Include" />
+        <e p="20171112211903_FeatureModelAdded.Designer.cs" t="Include" />
+        <e p="20171112211903_FeatureModelAdded.cs" t="Include" />
+        <e p="20171112212203_SeedFeature.Designer.cs" t="Include" />
+        <e p="20171112212203_SeedFeature.cs" t="Include" />
+        <e p="20171113195020_AddVehicle.Designer.cs" t="Include" />
+        <e p="20171113195020_AddVehicle.cs" t="Include" />
+        <e p="VegaDbContextModelSnapshot.cs" t="Include" />
+      </e>
+      <e p="Models" t="Include">
+        <e p="Feature.cs" t="Include" />
+        <e p="Make.cs" t="Include" />
+        <e p="Model.cs" t="Include" />
+        <e p="Vehicle.cs" t="Include" />
+        <e p="VehicleFeature.cs" t="Include" />
+      </e>
+      <e p="Persistence" t="Include">
+        <e p="VegaDbContext.cs" t="Include" />
+      </e>
+      <e p="Program.cs" t="Include" />
+      <e p="Startup.cs" t="Include" />
+      <e p="Vega.sln" t="IncludeFlat" />
+      <e p="Views" t="Include">
+        <e p="Home" t="Include">
+          <e p="Index.cshtml" t="Include" />
+        </e>
+        <e p="Shared" t="Include">
+          <e p="Error.cshtml" t="Include" />
+          <e p="_Layout.cshtml" t="Include" />
+        </e>
+        <e p="_ViewImports.cshtml" t="Include" />
+        <e p="_ViewStart.cshtml" t="Include" />
+      </e>
+      <e p="appsettings.Development.json" t="Include" />
+      <e p="appsettings.json" t="Include" />
+      <e p="bin" t="ExcludeRecursive" />
+      <e p="npm-shrinkwrap.json" t="Include" />
+      <e p="obj" t="ExcludeRecursive">
+        <e p="Debug" t="Include">
+          <e p="netcoreapp2.0" t="Include">
+            <e p="vega.AssemblyInfo.cs" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="package.json" t="Include" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="tsconfig.json" t="Include" />
+      <e p="vega.csproj" t="IncludeRecursive" />
+      <e p="webpack.config.js" t="Include" />
+      <e p="webpack.config.vendor.js" t="Include" />
+      <e p="wwwroot" t="Include">
+        <e p="dist" t="Include">
+          <e p="89889688147bd7575d6327160d64e760.svg" t="Include" />
+          <e p="main-client.js" t="Include" />
+          <e p="main-client.js.map" t="Include" />
+          <e p="vendor-manifest.json" t="Include" />
+          <e p="vendor.css" t="Include" />
+          <e p="vendor.js" t="Include" />
+        </e>
+      </e>
+    </e>
+  </component>
+</project>
