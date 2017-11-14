@@ -1,6 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel.DataAnnotations;
+using vega.Models;
 
 namespace vega.Controllers.Resources
 {
@@ -12,11 +14,11 @@ namespace vega.Controllers.Resources
 
         [Required]
         public ContactResource Contact { get; set; }
-        public IList<int> Features { get; set; }
+        public ICollection<int> Features { get; set; }
 
         public VehicleResource()
         {
-            Features = new List<int>();
+            Features = new Collection<int>();
         }
     }
 }

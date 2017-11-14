@@ -16,17 +16,19 @@ namespace vega.Models
         [Required]
         [StringLength(255)]
         public string ContactName { get; set; }
+
         [StringLength(255)]
         public string ContactEmail { get; set; }
+
         [Required]
         [StringLength(255)]
         public string ContactPhone { get; set; }
         public DateTime LastUpdate { get; set; }
-        public IList<VehicleFeature> Features { get; }
+        public ICollection<VehicleFeature> Features { get; set; }
 
         public Vehicle()
         {
-            Features = new List<VehicleFeature>();
+            Features = new Collection<VehicleFeature>();
         }
     }
 }
