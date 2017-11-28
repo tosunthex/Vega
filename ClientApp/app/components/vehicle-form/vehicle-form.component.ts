@@ -1,34 +1,48 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { VehicleService} from "../../services/vehicle.service";
-import any = jasmine.any;
-
+import { VehicleService } from './../../services/vehicle.service';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-vehicle-form',
   templateUrl: './vehicle-form.component.html',
-  styleUrls: ['./vehicle-form.component.css'],
-  encapsulation: ViewEncapsulation.None
+  styleUrls: ['./vehicle-form.component.css']
 })
 export class VehicleFormComponent implements OnInit {
-    private features: any[];
-    private makes: any[];
-    private models:any[];
-    private vehicle: any = {};
-  
-  constructor(
-      private vehicleService:VehicleService) { }
+  makes: any[]; 
+  models: any[];
+  features: any[];
+  vehicle: any = {
+      features:[],
+      contact:{}
+  };
+
+  constructor(private vehicleService: VehicleService) { }
 
   ngOnInit() {
-    
-    this.vehicleService.getMakes().subscribe(m => this.makes = m);
-    this.vehicleService.getFeature().subscribe(f => this.features = f);
-    
-    
-  }
-  
-  onMakeChange(){
-   let selectedMake = this.makes.find(m => m.id == this.vehicle.make);
-   this.models = selectedMake ? selectedMake.models: [];
+    this.vehicleService.getMakes().subscribe(makes => 
+      this.makes = makes);
+
+    this.vehicleService.getFeatures().subscribe(features => 
+      this.features = features);
   }
 
+  onMakeChange() {
+    let selectedMake = this.makes.find(m => m.id == this.vehicle.makeId);
+    this.models = selectedMake ? selectedMake.models : [];
+    delete this.vehicle.modelId;
+  }
+  
+  onFeatureToogle(featureId,$event){
+      if ($event.target.checked){
+          this.vehicle.features.push(featureId);
+      }
+      else {
+        let index = this.vehicle.features.indexOf(featureId);
+        this.vehicle.features.splice(index,1);
+      }
+  }
+  
+  submit(){
+      this.vehicleService.create(this.vehicle)
+          .subscribe(x => console.log(x));
+  }
 }
