@@ -1,4 +1,5 @@
-﻿import Raven = require('raven.js');
+﻿
+import * as Raven from "raven-js"
 import {ToastyService} from "ng2-toasty";
 import {ErrorHandler, Inject, NgZone} from "@angular/core";
 
