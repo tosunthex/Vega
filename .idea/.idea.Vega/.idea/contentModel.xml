@@ -37,6 +37,16 @@
               <e p="vehicle-form.component.html" t="Include" />
               <e p="vehicle-form.component.ts" t="Include" />
             </e>
+            <e p="vehicle-list" t="Include">
+              <e p="vehicle-list.component.css" t="Include" />
+              <e p="vehicle-list.component.html" t="Include" />
+              <e p="vehicle-list.component.ts" t="Include" />
+            </e>
+          </e>
+          <e p="models" t="Include">
+            <e p="Contact.ts" t="Include" />
+            <e p="KeyValuePair.ts" t="Include" />
+            <e p="Vehicle.ts" t="Include" />
           </e>
           <e p="services" t="Include">
             <e p="vehicle.service.ts" t="Include" />
