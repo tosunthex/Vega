@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel.DataAnnotations;
 
-namespace vega.Controllers.Resources
+namespace Vega.Controllers.Resources
 {
     public class SaveVehicleResource
     {

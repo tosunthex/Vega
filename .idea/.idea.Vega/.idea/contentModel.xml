@@ -66,6 +66,7 @@
         <e p="MakesController.cs" t="Include" />
         <e p="Resources" t="Include">
           <e p="ContactResource.cs" t="Include" />
+          <e p="FilterResource.cs" t="Include" />
           <e p="KeyValuePairResource.cs" t="Include" />
           <e p="MakeResource.cs" t="Include" />
           <e p="SaveVehicleResource.cs" t="Include" />
@@ -79,6 +80,7 @@
         <e p="IVehicleRepository.cs" t="Include" />
         <e p="Models" t="Include">
           <e p="Feature.cs" t="Include" />
+          <e p="Filter.cs" t="Include" />
           <e p="Make.cs" t="Include" />
           <e p="Model.cs" t="Include" />
           <e p="Vehicle.cs" t="Include" />
