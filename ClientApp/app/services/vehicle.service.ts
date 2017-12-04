@@ -6,7 +6,7 @@ import {SaveVehicle, Vehicle} from "../models/Vehicle";
 
 @Injectable()
 export class VehicleService {
-
+  private readonly vehicleEnpoint = "/api/vehicles"
   constructor(private http: Http) { }
 
   getFeatures() {
@@ -20,28 +20,42 @@ export class VehicleService {
   }
   
   getVehicle(id){
-    return this.http.get("/api/vehicles/"+id)
+    return this.http.get(this.vehicleEnpoint+'/'+id)
         .map(res => res.json());
   }
 
-  getVehicles(){
-    return this.http.get("/api/vehicles")
+  getVehicles(filter){
+    return this.http.get(this.vehicleEnpoint+'?'+this.toQueryString(filter))
         .map(res => res.json());
   }
+
+  toQueryString(obj){
+    var parts = []
+    for(var property in obj){
+      var value = obj[property]
+      if(value != null && value != undefined)
+      {
+        parts.push(encodeURIComponent(property)+'='+encodeURIComponent(value))
+      }
+    }
+
+    return parts.join('&');
+  }
+
 
   create(vehicle)
   {
-    return this.http.post("api/vehicles",vehicle)
+    return this.http.post(this.vehicleEnpoint,vehicle)
         .map(res => res.json());
   }
 
   update(vehicle:SaveVehicle){
-    return this.http.put("/api/vehicles/"+vehicle.id,vehicle)
+    return this.http.put(this.vehicleEnpoint+'/'+vehicle.id,vehicle)
         .map(res=> res.json());
   }
   
   deleteVehicle(id){
-    return this.http.delete('api/vehicles/'+id)
+    return this.http.delete(this.vehicleEnpoint+'/'+id)
         .map(res=> res.json())
   }
 

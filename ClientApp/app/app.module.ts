@@ -1,3 +1,4 @@
+import { PaginationComponent } from './components/shared/pagination.component';
 import * as Raven from "raven-js"
 import { FormsModule } from '@angular/forms'; 
 import {ErrorHandler, NgModule} from '@angular/core';
@@ -28,7 +29,8 @@ Raven
         FetchDataComponent,
         HomeComponent,
         VehicleFormComponent,
-        VehicleListComponent
+        VehicleListComponent,
+        PaginationComponent
     ],
     imports: [
         FormsModule,

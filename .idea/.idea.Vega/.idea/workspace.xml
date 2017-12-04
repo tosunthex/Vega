@@ -2,33 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e3031371-d19e-4e88-93ab-f19bf52c2a51" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controllers/FeaturesController.cs" afterPath="$PROJECT_DIR$/Controllers/FeaturesController.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controllers/MakesController.cs" afterPath="$PROJECT_DIR$/Controllers/MakesController.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controllers/Resources/ContactResource.cs" afterPath="$PROJECT_DIR$/Controllers/Resources/ContactResource.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controllers/Resources/KeyValuePairResource.cs" afterPath="$PROJECT_DIR$/Controllers/Resources/KeyValuePairResource.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controllers/Resources/MakeResource.cs" afterPath="$PROJECT_DIR$/Controllers/Resources/MakeResource.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controllers/Resources/SaveVehicleResource.cs" afterPath="$PROJECT_DIR$/Controllers/Resources/SaveVehicleResource.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controllers/Resources/VehicleResource.cs" afterPath="$PROJECT_DIR$/Controllers/Resources/VehicleResource.cs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controllers/VehiclesController.cs" afterPath="$PROJECT_DIR$/Controllers/VehiclesController.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Core/IUnitOfWork.cs" afterPath="$PROJECT_DIR$/Core/IUnitOfWork.cs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Core/IVehicleRepository.cs" afterPath="$PROJECT_DIR$/Core/IVehicleRepository.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Core/Models/Feature.cs" afterPath="$PROJECT_DIR$/Core/Models/Feature.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Core/Models/Make.cs" afterPath="$PROJECT_DIR$/Core/Models/Make.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Core/Models/Model.cs" afterPath="$PROJECT_DIR$/Core/Models/Model.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Core/Models/Vehicle.cs" afterPath="$PROJECT_DIR$/Core/Models/Vehicle.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Core/Models/VehicleFeature.cs" afterPath="$PROJECT_DIR$/Core/Models/VehicleFeature.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Mapping/MappingProfile.cs" afterPath="$PROJECT_DIR$/Mapping/MappingProfile.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Migrations/20170320232928_InitialModel.Designer.cs" afterPath="$PROJECT_DIR$/Migrations/20170320232928_InitialModel.Designer.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Migrations/20170321005120_ApplyConstraints.Designer.cs" afterPath="$PROJECT_DIR$/Migrations/20170321005120_ApplyConstraints.Designer.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Migrations/20170321005742_SeedDatabase.Designer.cs" afterPath="$PROJECT_DIR$/Migrations/20170321005742_SeedDatabase.Designer.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Migrations/20170322022552_AddFeature.Designer.cs" afterPath="$PROJECT_DIR$/Migrations/20170322022552_AddFeature.Designer.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Migrations/20170322022625_SeedFeatures.Designer.cs" afterPath="$PROJECT_DIR$/Migrations/20170322022625_SeedFeatures.Designer.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Migrations/20170326223931_AddVehicle.Designer.cs" afterPath="$PROJECT_DIR$/Migrations/20170326223931_AddVehicle.Designer.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Migrations/VegaDbContextModelSnapshot.cs" afterPath="$PROJECT_DIR$/Migrations/VegaDbContextModelSnapshot.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Persistence/UnitOfWork.cs" afterPath="$PROJECT_DIR$/Persistence/UnitOfWork.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Persistence/VegaDbContext.cs" afterPath="$PROJECT_DIR$/Persistence/VegaDbContext.cs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Persistence/VehicleRepository.cs" afterPath="$PROJECT_DIR$/Persistence/VehicleRepository.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Startup.cs" afterPath="$PROJECT_DIR$/Startup.cs" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -484,7 +460,7 @@
       <workItem from="1510601717708" duration="9222000" />
       <workItem from="1510647697503" duration="7971000" />
       <workItem from="1511891523362" duration="12412000" />
-      <workItem from="1511949922979" duration="5480000" />
+      <workItem from="1511949922979" duration="6069000" />
     </task>
     <task id="LOCAL-00001" summary="SeedDatabase">
       <created>1510434625910</created>
@@ -525,7 +501,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63363000" />
+    <option name="totallyTimeSpent" value="63952000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -795,15 +771,15 @@
         <state relative-caret-position="529">
           <caret line="99" column="86" lean-forward="false" selection-start-line="99" selection-start-column="86" selection-end-line="99" selection-end-column="86" />
           <folding>
-            <marker date="1511958571741" expanded="false" signature="6:134" ph="..." />
-            <marker date="1511958571741" expanded="true" signature="230:2703" ph="{...}" />
-            <marker date="1511958571741" expanded="true" signature="306:2701" ph="{...}" />
-            <marker date="1511958571741" expanded="true" signature="546:658" ph="{...}" />
-            <marker date="1511958571741" expanded="true" signature="773:1199" ph="{...}" />
-            <marker date="1511958571741" expanded="true" signature="1329:1827" ph="{...}" />
-            <marker date="1511958571741" expanded="true" signature="1912:2152" ph="{...}" />
-            <marker date="1511958571741" expanded="true" signature="2231:2462" ph="{...}" />
-            <marker date="1511958571741" expanded="true" signature="2543:2696" ph="{...}" />
+            <marker date="1511959070193" expanded="false" signature="6:134" ph="..." />
+            <marker date="1511959070193" expanded="true" signature="230:2808" ph="{...}" />
+            <marker date="1511959070193" expanded="true" signature="306:2806" ph="{...}" />
+            <marker date="1511959070193" expanded="true" signature="546:658" ph="{...}" />
+            <marker date="1511959070193" expanded="true" signature="773:1199" ph="{...}" />
+            <marker date="1511959070193" expanded="true" signature="1329:1827" ph="{...}" />
+            <marker date="1511959070193" expanded="true" signature="1912:2152" ph="{...}" />
+            <marker date="1511959070193" expanded="true" signature="2231:2462" ph="{...}" />
+            <marker date="1511959070193" expanded="true" signature="2705:2801" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -813,14 +789,14 @@
         <state relative-caret-position="462">
           <caret line="36" column="21" lean-forward="false" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
           <folding>
-            <marker date="1511958571745" expanded="true" signature="6:107" ph="..." />
-            <marker date="1511958571745" expanded="true" signature="169:1232" ph="{...}" />
-            <marker date="1511958571745" expanded="true" signature="225:1230" ph="{...}" />
-            <marker date="1511958571745" expanded="true" signature="325:369" ph="{...}" />
-            <marker date="1511958571745" expanded="true" signature="448:784" ph="{...}" />
-            <marker date="1511958571745" expanded="true" signature="843:1054" ph="{...}" />
-            <marker date="1511958571745" expanded="true" signature="1093:1142" ph="{...}" />
-            <marker date="1511958571745" expanded="true" signature="1183:1226" ph="{...}" />
+            <marker date="1511959588526" expanded="true" signature="6:47" ph="..." />
+            <marker date="1511959588526" expanded="true" signature="1215:1414" ph="{...}" />
+            <marker date="1511959588526" expanded="true" signature="1215:1412" ph="{...}" />
+            <marker date="1511959588526" expanded="true" signature="325:369" ph="{...}" />
+            <marker date="1511959588526" expanded="true" signature="448:784" ph="{...}" />
+            <marker date="1511959588526" expanded="true" signature="1215:1236" ph="{...}" />
+            <marker date="1511959588526" expanded="true" signature="1275:1324" ph="{...}" />
+            <marker date="1511959588526" expanded="true" signature="1365:1408" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -830,9 +806,9 @@
         <state relative-caret-position="182">
           <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
           <folding>
-            <marker date="1511958571741" expanded="true" signature="6:87" ph="..." />
-            <marker date="1511958571741" expanded="true" signature="108:357" ph="{...}" />
-            <marker date="1511958571741" expanded="true" signature="150:355" ph="{...}" />
+            <marker date="1511958976566" expanded="true" signature="6:87" ph="..." />
+            <marker date="1511958976566" expanded="true" signature="108:370" ph="{...}" />
+            <marker date="1511958976566" expanded="true" signature="150:368" ph="{...}" />
           </folding>
         </state>
       </provider>
