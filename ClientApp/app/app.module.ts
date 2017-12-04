@@ -15,6 +15,7 @@ import { CounterComponent } from './components/counter/counter.component';
 import { VehicleFormComponent } from './components/vehicle-form/vehicle-form.component';
 import {AppErrorHandler} from "./app.error-handler";
 import { VehicleListComponent } from './components/vehicle-list/vehicle-list.component';
+import { VehicleViewComponent } from './components/vehicle-view/vehicle-view.component';
 
 Raven
     .config('https://b26551183a714d3294685aa16f2df724@sentry.io/251897')
@@ -30,7 +31,8 @@ Raven
         HomeComponent,
         VehicleFormComponent,
         VehicleListComponent,
-        PaginationComponent
+        PaginationComponent,
+        VehicleViewComponent
     ],
     imports: [
         FormsModule,
@@ -39,7 +41,8 @@ Raven
         RouterModule.forRoot([
             { path: '', redirectTo: 'vehicles', pathMatch: 'full' },
             { path: 'vehicles/new', component: VehicleFormComponent },
-            { path: 'vehicles/:id', component: VehicleFormComponent },
+            { path: 'vehicles/edit/:id', component: VehicleFormComponent },
+            { path: 'vehicles/:id', component: VehicleViewComponent },
             { path: 'vehicles', component: VehicleListComponent },
             { path: 'home', component: HomeComponent },
             { path: 'counter', component: CounterComponent },
