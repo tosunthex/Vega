@@ -1,8 +1,8 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore.Migrations;
+using System;
 using System.Collections.Generic;
-using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace Vega.Migrations
+namespace vega.Migrations
 {
     public partial class ApplyConstraints : Migration
     {
@@ -28,6 +28,7 @@ namespace Vega.Migrations
             migrationBuilder.AlterColumn<string>(
                 name: "Name",
                 table: "Models",
+                type: "nvarchar(255)",
                 maxLength: 255,
                 nullable: false,
                 oldClrType: typeof(string),
@@ -36,6 +37,7 @@ namespace Vega.Migrations
             migrationBuilder.AlterColumn<string>(
                 name: "Name",
                 table: "Makes",
+                type: "nvarchar(255)",
                 maxLength: 255,
                 nullable: false,
                 oldClrType: typeof(string),
@@ -79,6 +81,7 @@ namespace Vega.Migrations
                 table: "Model",
                 nullable: true,
                 oldClrType: typeof(string),
+                oldType: "nvarchar(255)",
                 oldMaxLength: 255);
 
             migrationBuilder.AlterColumn<string>(
@@ -86,6 +89,7 @@ namespace Vega.Migrations
                 table: "Makes",
                 nullable: true,
                 oldClrType: typeof(string),
+                oldType: "nvarchar(255)",
                 oldMaxLength: 255);
 
             migrationBuilder.AddPrimaryKey(
