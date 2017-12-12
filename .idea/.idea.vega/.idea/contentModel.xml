@@ -95,8 +95,8 @@
       <e p="package.json" t="Include" />
       <e p="packages" t="ExcludeRecursive" />
       <e p="tsconfig.json" t="Include" />
-      <e p="vega.csproj" t="IncludeRecursive" />
-      <e p="vega.sln" t="IncludeFlat" />
+      <e p="Vega.csproj" t="IncludeRecursive" />
+      <e p="Vega.sln" t="IncludeFlat" />
       <e p="webpack.config.js" t="Include" />
       <e p="webpack.config.vendor.js" t="Include" />
       <e p="wwwroot" t="Include">

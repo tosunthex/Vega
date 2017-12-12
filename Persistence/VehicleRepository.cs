@@ -37,8 +37,6 @@ namespace Vega.Persistence
       var query = context.Vehicles
         .Include(v=> v.Model)
           .ThenInclude(m => m.Make)
-        .Include(v => v.Features)
-          .ThenInclude(f => f.Feature)
         .AsQueryable();
 
       var columnsMap = new Dictionary<string, Expression<Func<Vehicle, object>>>(){
@@ -47,11 +45,7 @@ namespace Vega.Persistence
         ["contactName"] = v => v.ContactName
       };
 
-      if(queryObj.MakeId.HasValue){
-        query = query.Where(v => v.Model.MakeId == queryObj.MakeId);
-      }
-      if(queryObj.ModelId.HasValue)
-        query = query.Where(v => v.ModelId == queryObj.ModelId);
+      query = query.ApplyFiltering(queryObj);
 
       query = query.ApplyOrdering(queryObj,columnsMap);
 

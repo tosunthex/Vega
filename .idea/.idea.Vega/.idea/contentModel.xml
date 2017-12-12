@@ -32,6 +32,9 @@
               <e p="navmenu.component.html" t="Include" />
               <e p="navmenu.component.ts" t="Include" />
             </e>
+            <e p="shared" t="Include">
+              <e p="pagination.component.ts" t="Include" />
+            </e>
             <e p="vehicle-form" t="Include">
               <e p="vehicle-form.component.css" t="Include" />
               <e p="vehicle-form.component.html" t="Include" />
@@ -42,6 +45,11 @@
               <e p="vehicle-list.component.html" t="Include" />
               <e p="vehicle-list.component.ts" t="Include" />
             </e>
+            <e p="vehicle-view" t="Include">
+              <e p="vehicle-view.component.css" t="Include" />
+              <e p="vehicle-view.component.html" t="Include" />
+              <e p="vehicle-view.component.ts" t="Include" />
+            </e>
           </e>
           <e p="models" t="Include">
             <e p="Contact.ts" t="Include" />
@@ -49,13 +57,17 @@
             <e p="Vehicle.ts" t="Include" />
           </e>
           <e p="services" t="Include">
+            <e p="photo.services.ts" t="Include" />
             <e p="vehicle.service.ts" t="Include" />
           </e>
         </e>
         <e p="boot-client.ts" t="Include" />
         <e p="boot-server.ts" t="Include" />
         <e p="dist" t="Include">
+          <e p="674f50d287a8c48dc19ba404d20fe713.eot" t="Include" />
           <e p="89889688147bd7575d6327160d64e760.svg" t="Include" />
+          <e p="912ec66d7572ff821749319396470bde.svg" t="Include" />
+          <e p="b06871f281fee6b241d60582ae9369b9.ttf" t="Include" />
           <e p="main-server.js" t="Include" />
           <e p="vendor.js" t="Include" />
         </e>
@@ -64,12 +76,15 @@
         <e p="FeaturesController.cs" t="Include" />
         <e p="HomeController.cs" t="Include" />
         <e p="MakesController.cs" t="Include" />
+        <e p="PhotosController.cs" t="Include" />
         <e p="Resources" t="Include">
           <e p="ContactResource.cs" t="Include" />
-          <e p="FilterResource.cs" t="Include" />
           <e p="KeyValuePairResource.cs" t="Include" />
           <e p="MakeResource.cs" t="Include" />
+          <e p="PhotoResource.cs" t="Include" />
+          <e p="QueryResultResource.cs" t="Include" />
           <e p="SaveVehicleResource.cs" t="Include" />
+          <e p="VehicleQueryResource.cs" t="Include" />
           <e p="VehicleResource.cs" t="Include" />
         </e>
         <e p="SampleDataController.cs" t="Include" />
@@ -80,12 +95,19 @@
         <e p="IVehicleRepository.cs" t="Include" />
         <e p="Models" t="Include">
           <e p="Feature.cs" t="Include" />
-          <e p="Filter.cs" t="Include" />
           <e p="Make.cs" t="Include" />
           <e p="Model.cs" t="Include" />
+          <e p="Photo.cs" t="Include" />
+          <e p="PhotoSettings.cs" t="Include" />
+          <e p="QueryResult.cs" t="Include" />
           <e p="Vehicle.cs" t="Include" />
           <e p="VehicleFeature.cs" t="Include" />
+          <e p="VehicleQuery.cs" t="Include" />
         </e>
+      </e>
+      <e p="Extensions" t="Include">
+        <e p="IQueryObject.cs" t="Include" />
+        <e p="IQueryableExtensions.cs" t="Include" />
       </e>
       <e p="Mapping" t="Include">
         <e p="MappingProfile.cs" t="Include" />
@@ -103,6 +125,8 @@
         <e p="20171112212203_SeedFeature.cs" t="Include" />
         <e p="20171113195020_AddVehicle.Designer.cs" t="Include" />
         <e p="20171113195020_AddVehicle.cs" t="Include" />
+        <e p="20171205133432_AddPhoto.Designer.cs" t="Include" />
+        <e p="20171205133432_AddPhoto.cs" t="Include" />
         <e p="VegaDbContextModelSnapshot.cs" t="Include" />
       </e>
       <e p="Persistence" t="Include">
@@ -145,7 +169,10 @@
       <e p="webpack.config.vendor.js" t="Include" />
       <e p="wwwroot" t="Include">
         <e p="dist" t="Include">
+          <e p="674f50d287a8c48dc19ba404d20fe713.eot" t="Include" />
           <e p="89889688147bd7575d6327160d64e760.svg" t="Include" />
+          <e p="912ec66d7572ff821749319396470bde.svg" t="Include" />
+          <e p="b06871f281fee6b241d60582ae9369b9.ttf" t="Include" />
           <e p="main-client.js" t="Include" />
           <e p="main-client.js.map" t="Include" />
           <e p="vendor-manifest.json" t="Include" />
@@ -153,6 +180,22 @@
           <e p="vendor.js" t="Include" />
         </e>
         <e p="favicon.ico" t="Include" />
+        <e p="uploads" t="Include">
+          <e p="22a5bd2d-b177-4c88-ba83-4d45d3ab1eb0.jpg" t="Include" />
+          <e p="528fb735-5542-4a4f-8fa3-7d2d08f002e5.jpg" t="Include" />
+          <e p="52d4a8c8-c263-4e76-afce-0cab9cd9097c.jpg" t="Include" />
+          <e p="5c492f4d-a4f8-44f9-b7de-d6e8bdd95034.jpg" t="Include" />
+          <e p="66e8a3a0-8f8d-4a7d-9e6c-f78aca8cfa4d.jpg" t="Include" />
+          <e p="791d264b-c55e-4a51-850b-0994dc019e81.png" t="Include" />
+          <e p="86009be2-295b-4c35-8507-46521a7e2679.jpg" t="Include" />
+          <e p="afbeb8d7-9646-4e54-a967-c04bc28615c0.jpg" t="Include" />
+          <e p="bd611e09-5c98-4411-bcd6-1a990e98d32a.jpg" t="Include" />
+          <e p="d0e9fc28-d376-42bf-99b9-9fc769abdcf5.jpg" t="Include" />
+          <e p="e431b605-4f7c-4eb7-89aa-7bee22db9517.png" t="Include" />
+          <e p="e5eb0c3d-2a47-4532-aa6a-014e889f0f3b.jpg" t="Include" />
+          <e p="e64b93ea-3976-4926-8671-92074c1342b2.jpg" t="Include" />
+          <e p="e7475254-792b-492d-be32-8e724a00f26f.jpg" t="Include" />
+        </e>
       </e>
     </e>
   </component>

@@ -1,7 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { NgZone } from '@angular/core';
+import { ProgressService } from './../../services/progress.service';
+import { PhotoService } from './../../services/photo.services';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ToastyService } from 'ng2-toasty';
 import { VehicleService } from '../../services/vehicle.service';
+import { ElementRef } from '@angular/core/src/linker/element_ref';
 
 @Component({
   selector: 'app-vehicle-view',
@@ -9,14 +13,20 @@ import { VehicleService } from '../../services/vehicle.service';
   styleUrls: ['./vehicle-view.component.css']
 })
 export class VehicleViewComponent implements OnInit {
+  @ViewChild("fileInput")fileInput:ElementRef;
   vehicle: any;
   vehicleId: number; 
+  photos:any[];
+  progress:any[];
 
   constructor(
+    private zone:NgZone,
     private route: ActivatedRoute, 
     private router: Router,
     private toasty: ToastyService,
-    private vehicleService: VehicleService) { 
+    private vehicleService: VehicleService,
+    private photoService:PhotoService,
+    private progressService:ProgressService) { 
 
     route.params.subscribe(p => {
       this.vehicleId = +p['id'];
@@ -25,8 +35,11 @@ export class VehicleViewComponent implements OnInit {
         return; 
       }
     });
-}
-ngOnInit() { 
+  }
+  ngOnInit() { 
+    this.photoService.getPhotos(this.vehicleId)
+        .subscribe(photos => this.photos = photos);
+
   this.vehicleService.getVehicle(this.vehicleId)
     .subscribe(
       v => this.vehicle = v,
@@ -36,14 +49,42 @@ ngOnInit() {
           return; 
         }
       });
-}
-
-delete() {
-  if (confirm("Are you sure?")) {
-    this.vehicleService.deleteVehicle(this.vehicle.id)
-      .subscribe(x => {
-        this.router.navigate(['/vehicles']);
-      });
   }
-}
+
+  delete() {
+    if (confirm("Are you sure?")) {
+      this.vehicleService.deleteVehicle(this.vehicle.id)
+        .subscribe(x => {
+          this.router.navigate(['/vehicles']);
+        });
+    }
+  }
+
+  uploadPhoto(){  
+    this.progressService.startTracking()
+                        .subscribe(progress => 
+                          {
+                            console.log(progress);
+                            this.zone.run(() => {this.progress = progress;}) 
+                          },
+                          null,
+                          ()=> {this.progress = null});
+
+    var nativeElement:HTMLInputElement = this.fileInput.nativeElement;
+    var file =  nativeElement.files[0];
+    nativeElement.value = '';
+
+    this.photoService.upload(this.vehicleId,file)
+                    .subscribe(photo=> this.photos.push(photo),
+                      err=> {
+                        this.toasty.error({
+                          title: "Error",
+                          msg: err.text(),
+                          theme: "bootstrap",
+                          showClose: true,
+                          timeout: 5000
+                      });
+                      }
+                    );
+  }
 }

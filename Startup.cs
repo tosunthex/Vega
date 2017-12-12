@@ -8,6 +8,8 @@ using Microsoft.Extensions.Logging;
 using AutoMapper;
 using Vega.Core;
 using Vega.Persistence;
+using Vega.Core.Models;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 namespace Vega
 {
@@ -18,8 +20,11 @@ namespace Vega
             var builder = new ConfigurationBuilder()
                 .SetBasePath(env.ContentRootPath)
                 .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
-                .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
-                .AddEnvironmentVariables();
+                .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true);
+                if(env.IsDevelopment()){
+                    builder = builder.AddUserSecrets<Startup>();
+                }
+                //.AddEnvironmentVariables();
             Configuration = builder.Build();
         }
 
@@ -28,8 +33,12 @@ namespace Vega
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.Configure<PhotoSettings>(Configuration.GetSection("PhotoSettings"));
             services.AddScoped<IVehicleRepository, VehicleRepository>();
+            services.AddScoped<IPhotoRepository,PhotoRepository>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.AddTransient<IPhotoService,PhotoService>();
+            services.AddTransient<IPhotoStorage,PhotoStorage>();
 
             services.AddAutoMapper();
 
@@ -37,6 +46,19 @@ namespace Vega
 
             // Add framework services.
             services.AddMvc();
+
+            // 1. Add Authentication Services
+            services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+
+            }).AddJwtBearer(options =>
+            {
+                options.Authority = "https://levent.auth0.com/"; //token olusturan
+                options.Audience = "http://api.vega.com";        //olusan token i kimin kullanacagi
+            });
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -60,6 +82,10 @@ namespace Vega
 
             app.UseStaticFiles();
 
+            // 2. Enable authentication middleware
+            app.UseAuthentication();
+
+            
             app.UseMvc(routes =>
             {
                 routes.MapRoute(

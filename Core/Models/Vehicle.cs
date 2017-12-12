@@ -29,6 +29,7 @@ namespace Vega.Core.Models
         public Vehicle()
         {
             Features = new Collection<VehicleFeature>();
+            Photos = new Collection<Photo>();
         }
     }
 }
